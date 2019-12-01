@@ -10,6 +10,14 @@
 
 #include <ext/standard/info.h>
 
+#if PHP_MAJOR_VERSION >= 8
+#define TSRMLS_CC
+#define TSRMLS_C
+#define TSRMLS_DC
+#define TSRMLS_D
+#define TSRMLS_FETCH()
+#endif
+
 #ifdef HAVE_CONFIG_H
 #  include "config.h"
 #endif
